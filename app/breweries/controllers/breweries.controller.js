@@ -46,8 +46,12 @@ exports.update = function(req, res){
 	req.brewery.description = req.body.description;
 	req.brewery.create = req.body.create;
 	req.brewery.update = req.body.update;
-
-	brewery.update = new Date();
+	if(brewery.create == null || brewery.create == ""){
+	    brewery.create = new Date();
+	}
+	if(brewery.update == null || brewery.update == ""){
+	    brewery.update = new Date();
+	}
 	brewery.save(function(err){
 		if(err){
 			rest.status(400).json({
