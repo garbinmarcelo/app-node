@@ -25,6 +25,7 @@ var express = require('express'),
 
 		require('../app/core/routes/core.routes')(api);
 		require('../app/breweries/routes/breweries.routes')(api);
+		require('../app/factories/routes/factories.routes')(api);
 
 
 		app.use('/api', api);

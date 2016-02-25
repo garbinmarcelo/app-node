@@ -11,6 +11,12 @@
 		},
 		description:{
 			type: String
+		},address:{
+			type: String
+		},phone:{
+			type: String
+		},kind:{
+			type:String
 		}
 	})
 
