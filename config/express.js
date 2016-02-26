@@ -5,29 +5,27 @@ var express = require('express'),
 	config = require('./config');
 
 
-	module.exports = function(db) {
-		var app = express();
+module.exports = function(db) {
+	var app = express();
 
-		app.use(function(req, res, next) {
-			res.header("Access-Control-Allow-Origin", "*");
-			res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-			res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-			res.setHeader('Access-Control-Allow-Credentials', true);
-			next();
-		});
+	app.use(function(req, res, next) {
+		res.header("Access-Control-Allow-Origin", "*");
+		res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+		res.setHeader('Access-Control-Allow-Credentials', true);
+		next();
+	});
 
-		app.use(bodyParser.urlencoded({
-			extended: true
-		}));
-		app.use(bodyParser.json());
+	app.use(bodyParser.urlencoded({
+		extended: true
+	}));
+	app.use(bodyParser.json());
 
-		var api = express.Router();
+	var api = express.Router();
 
-		require('../app/core/routes/core.routes')(api);
-		require('../app/breweries/routes/breweries.routes')(api);
-		require('../app/factories/routes/factories.routes')(api);
+	require('../app/core/routes/core.routes')(api);
+	require('../app/breweries/routes/breweries.routes')(api);
 
-
-		app.use('/api', api);
-		return app;
-	}
+	app.use('/api', api);
+	return app;
+}

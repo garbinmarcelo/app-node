@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/api-unoesc-app-dev'
+	db: 'mongodb://localhost/app-node-dev'
 };

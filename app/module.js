@@ -2,8 +2,7 @@
     'use strict';
     
     angular
-        .module('app', ['ngRoute', 'brewery', 'ngRoute', 'factory'])
-        
+        .module('app', ['ngRoute', 'brewery', 'ngRoute'])
         .config(Config);
     
     function Config($routeProvider) {

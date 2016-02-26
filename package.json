@@ -1,17 +1,17 @@
 {
-  "name": "unoesc",
+  "name": "app-node",
   "version": "1.0.0",
-  "description": "Unoesc app",
+  "description": "App com Node + Express + Angular",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "set NODE_ENV=development&&nodemon server.js"
   },
   "keywords": [
-    "unoesc",
+    "node",
     "js"
   ],
-  "author": "andré",
+  "author": "Marcelo Garbin",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.0",

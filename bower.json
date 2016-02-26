@@ -1,8 +1,8 @@
 {
-  "name": "unoesc-app-front",
-  "version": "0.0.0",
+  "name": "app-node-front",
+  "version": "1.0.0",
   "authors": [
-    "Guilherme Siquinelli <guiseek@gmail.com>"
+    "Marcelo Garbin"
   ],
   "description": "Unoesc App Front",
   "main": "index.html",
@@ -10,9 +10,7 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ],
   "dependencies": {
     "angular": "~1.5.0",
